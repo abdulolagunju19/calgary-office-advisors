@@ -1,0 +1,37 @@
+{
+  "name": "calgary-office-advisors",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Calgary Office Advisors - Commercial Real Estate Advisory Services",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "gray-matter": "^4.0.3",
+    "react-markdown": "^9.0.1",
+    "@chakra-ui/icons": "^2.1.0",
+    "@chakra-ui/react": "^2.8.0",
+    "@chakra-ui/theme-tools": "^2.1.0",
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@vercel/analytics": "^1.0.2",
+    "date-fns": "^2.30.0",
+    "framer-motion": "^10.15.0",
+    "next": "^16.1.1",
+    "next-seo": "^6.1.0",
+    "nprogress": "^0.2.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-icons": "^4.10.1"
+  },
+  "devDependencies": {
+    "eslint": "8.45.0",
+    "eslint-config-next": "13.4.12"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}

@@ -1,0 +1,22 @@
+[
+  {
+    "id": "example-1",
+    "name": "Example Company A",
+    "address": "500 5 Ave SW, Calgary, AB",
+    "website": "https://example.com",
+    "category": "Professional services",
+    "description": "Add a short description for the company profile page.",
+    "lat": 51.0486,
+    "lng": -114.0708
+  },
+  {
+    "id": "example-2",
+    "name": "Example Company B",
+    "address": "250 6 Ave SW, Calgary, AB",
+    "website": "https://example.com",
+    "category": "Technology",
+    "description": "Add a short description for the company profile page.",
+    "lat": 51.0502,
+    "lng": -114.0813
+  }
+]

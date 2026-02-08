@@ -1,0 +1,38 @@
+[
+  {
+    "id": "brookfield-place",
+    "name": "Brookfield Place East",
+    "address": "525 8 Ave SW, Calgary, AB T2P 1G1",
+    "submarket": "Downtown",
+    "photo": null,
+    "description": "A landmark office tower in downtown Calgary, Brookfield Place East is part of the Brookfield Place complex and offers premium Class A space with strong transit and amenity access.",
+    "cost": "Rent typically in the mid to upper range for downtown Class A. Contact listing sources for current rates.",
+    "amenities": ["Transit-connected", "Retail at grade", "Conference facilities", "On-site management", "Bike storage"],
+    "history": "Completed as part of the broader Brookfield Place development, the tower has been a central piece of Calgary's downtown office core.",
+    "builtReason": "Built to provide high-quality office space for corporate and professional tenants, with a focus on sustainability and urban connectivity. Buildings are living things—this one was designed to anchor the downtown and adapt to how Calgarians work."
+  },
+  {
+    "id": "bow-valley-square",
+    "name": "Bow Valley Square 2",
+    "address": "205 5 Ave SW, Calgary, AB T2P 2V7",
+    "submarket": "Downtown",
+    "photo": null,
+    "description": "One of four towers in Bow Valley Square, this building offers established downtown office space with a strong presence on 5th Avenue.",
+    "cost": "Often competitive within downtown Class B. Rates vary by floor and term.",
+    "amenities": ["+15 pedway", "Retail and services", "Parking", "Multiple tower complex"],
+    "history": "Bow Valley Square has been a fixture of Calgary's downtown for decades, with ongoing updates to common areas and systems.",
+    "builtReason": "Developed to create a cohesive campus-style environment in the core. The building continues to evolve with tenant needs and market cycles—buildings are living things that reflect the city's growth and change."
+  },
+  {
+    "id": "telus-sky",
+    "name": "Telus Sky",
+    "address": "619 8 Ave SW, Calgary, AB T2P 1G2",
+    "submarket": "Downtown",
+    "photo": null,
+    "description": "A distinctive mixed-use tower with residential and office components, designed by Bjarke Ingels Group. A striking addition to the Calgary skyline.",
+    "cost": "Premium downtown pricing reflecting design and location.",
+    "amenities": ["Landmark architecture", "Mixed-use (office + residential)", "Transit proximity", "Modern building systems"],
+    "history": "Opened in the 2020s, Telus Sky redefined the western edge of downtown with its sculptural form and mixed-use program.",
+    "builtReason": "Conceived to blend workplace and urban living and to signal Calgary's ambition. Buildings are living things—this one was built to inspire and to adapt as the city and its workforce evolve."
+  }
+]

@@ -1,0 +1,18 @@
+[
+  { "id": "downtown-calgary", "name": "Downtown Calgary", "lat": 51.0465, "lng": -114.0719, "buildingFilter": "Downtown", "coworkingFilter": "Downtown" },
+  { "id": "beltline", "name": "Beltline", "lat": 51.0400, "lng": -114.0750, "buildingFilter": "Beltline", "coworkingFilter": "Beltline" },
+  { "id": "eau-claire", "name": "Eau Claire", "lat": 51.0520, "lng": -114.0680, "buildingFilter": "Eau Claire", "coworkingFilter": "Eau Claire" },
+  { "id": "mission", "name": "Mission", "lat": 51.0380, "lng": -114.0820, "buildingFilter": "Mission", "coworkingFilter": "Mission" },
+  { "id": "inglewood", "name": "Inglewood", "lat": 51.0390, "lng": -114.0370, "buildingFilter": "Inglewood", "coworkingFilter": "Inglewood" },
+  { "id": "kensington", "name": "Kensington", "lat": 51.0580, "lng": -114.0920, "buildingFilter": "Kensington", "coworkingFilter": "Kensington" },
+  { "id": "stephen-avenue", "name": "Stephen Avenue", "lat": 51.0450, "lng": -114.0680, "buildingFilter": "Stephen Avenue", "coworkingFilter": "Stephen Avenue" },
+  { "id": "17th-avenue-sw", "name": "17th Avenue SW", "lat": 51.0350, "lng": -114.0780, "buildingFilter": "17th Avenue SW", "coworkingFilter": "17th Avenue SW" },
+  { "id": "east-village", "name": "East Village", "lat": 51.0480, "lng": -114.0580, "buildingFilter": "East Village", "coworkingFilter": "East Village" },
+  { "id": "macleod-trail", "name": "Macleod Trail", "lat": 51.0300, "lng": -114.0650, "buildingFilter": "Macleod Trail", "coworkingFilter": "Macleod Trail" },
+  { "id": "sunridge-business-park", "name": "Sunridge Business Park", "lat": 51.0980, "lng": -113.9650, "buildingFilter": "Sunridge Business Park", "coworkingFilter": "Sunridge Business Park" },
+  { "id": "deerfoot-meadows", "name": "Deerfoot Meadows", "lat": 51.0080, "lng": -113.9850, "buildingFilter": "Deerfoot Meadows", "coworkingFilter": "Deerfoot Meadows" },
+  { "id": "glenmore-business-park", "name": "Glenmore Business Park", "lat": 50.9850, "lng": -114.0650, "buildingFilter": "Glenmore Business Park", "coworkingFilter": "Glenmore Business Park" },
+  { "id": "barlow-trail", "name": "Barlow Trail", "lat": 51.0750, "lng": -113.9450, "buildingFilter": "Barlow Trail", "coworkingFilter": "Barlow Trail" },
+  { "id": "centre-street", "name": "Centre Street", "lat": 51.0680, "lng": -114.0780, "buildingFilter": "Centre Street", "coworkingFilter": "Centre Street" },
+  { "id": "barclay-parade", "name": "Barclay Parade", "lat": 51.0440, "lng": -114.0720, "buildingFilter": "Barclay Parade", "coworkingFilter": "Barclay Parade" }
+]

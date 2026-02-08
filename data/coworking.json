@@ -1,0 +1,35 @@
+[
+  {
+    "id": "platform-calgary",
+    "name": "Platform Calgary",
+    "location": "407 9 Ave SW, Calgary, AB",
+    "submarket": "Downtown",
+    "image": "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80",
+    "description": "Innovation hub and startup space with programming, events, and flexible workspace for entrepreneurs and scale-ups.",
+    "cost": "Various membership tiers; check operator for current pricing.",
+    "amenities": ["Event space", "Programming and workshops", "Flexible desks and private options", "Community focus"],
+    "history": "Platform Calgary supports the local innovation ecosystem and has become a central node for startups and scale-ups in the city."
+  },
+  {
+    "id": "worknicely",
+    "name": "Work Nicely",
+    "location": "Downtown Calgary",
+    "submarket": "Downtown",
+    "image": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&q=80",
+    "description": "Boutique coworking with a focus on community and flexible membership. Private offices and shared space.",
+    "cost": "Membership and private office options; contact for rates.",
+    "amenities": ["Private offices", "Shared workspace", "Community events", "Flexible terms"],
+    "history": "A locally focused coworking option in the downtown core."
+  },
+  {
+    "id": "we-work-calgary",
+    "name": "WeWork",
+    "location": "Multiple locations, Downtown Calgary",
+    "submarket": "Downtown",
+    "image": "https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=800&q=80",
+    "description": "Flexible workspace with private offices, dedicated desks, and hot desks. Amenities and networking events.",
+    "cost": "Varies by product and location; see WeWork for current offerings.",
+    "amenities": ["Private offices", "Dedicated and hot desks", "Common areas", "Networking and events"],
+    "history": "Global operator with multiple Calgary locations offering flexible terms and a consistent product."
+  }
+]
