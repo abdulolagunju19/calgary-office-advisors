@@ -1,24 +1,24 @@
 {
   "designers": [
     {
-      "firm": "Example Design Co.",
+      "firm": "Holland Design",
       "specialty": "Office interior design and space planning",
       "description": "Full-service commercial interior design for office fit-outs and renovations."
     },
     {
-      "firm": "Workplace Studio",
+      "firm": "Arcadis",
       "specialty": "Workplace strategy and design",
       "description": "Strategy, programming, and design for corporate and professional services offices."
     }
   ],
   "lawFirms": [
     {
-      "firm": "Example Law LLP",
+      "firm": "KH Dunkley Law Group",
       "specialty": "Commercial leasing and real estate",
       "description": "Lease review, negotiation support, and real estate transactions for tenants and landlords."
     },
     {
-      "firm": "Real Property Group",
+      "firm": "DBH Law",
       "specialty": "Lease review and tenant representation support",
       "description": "Legal support for lease negotiations and commercial real estate matters."
     }
