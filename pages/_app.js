@@ -34,6 +34,8 @@ const GlobalStyle = ({ children }) => {
           html {
             min-width: 320px;
             scroll-behavior: smooth;
+            max-width: 100vw;
+            overflow-x: hidden;
           }
           
           body {

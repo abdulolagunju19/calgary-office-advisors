@@ -1,21 +1,21 @@
 [
   {
     "id": "example-1",
-    "name": "Example Company A",
-    "address": "500 5 Ave SW, Calgary, AB",
-    "website": "https://example.com",
+    "name": "Ensign Energy Services",
+    "address": "400 5 Ave SW, Calgary, AB",
+    "website": "https://www.ensignenergy.com/",
     "category": "Professional services",
-    "description": "Add a short description for the company profile page.",
+    "description": "Ensign. The worlds most resourceful energy services company.",
     "lat": 51.0486,
     "lng": -114.0708
   },
   {
     "id": "example-2",
-    "name": "Example Company B",
+    "name": "Tourmaline Oil Corp.",
     "address": "250 6 Ave SW, Calgary, AB",
-    "website": "https://example.com",
+    "website": "https://www.tourmalineoil.com/",
     "category": "Technology",
-    "description": "Add a short description for the company profile page.",
+    "description": "Tourmaline Oil Corp. is a leading Canadian oil and natural gas company.",
     "lat": 51.0502,
     "lng": -114.0813
   }
