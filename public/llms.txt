@@ -1,0 +1,44 @@
+# Calgary Office Advisors
+
+> Commercial real estate insights, building directory, and trusted references for Calgary businesses navigating the leasing process.
+
+## Main Sections
+
+- /: Homepage - discover Calgary's office spaces
+- /buildings: Office building directory by submarket
+- /buildings/calculator: Office space calculator tool
+- /coworking: Coworking spaces directory
+- /insights: Companies directory and articles
+- /references: Designers, law firms, and lease professionals
+- /contact: Contact information
+- /about: About Calgary Office Advisors
+- /services: Services offered
+
+## Insights & Articles
+
+- /insights/office-costs-calgary: Guide to Office Costs in Calgary
+- /insights/plan-office-move: How to Plan Your Office Move
+- /insights/sublease-vs-headlease: Sublease vs Headlease - What You Need to Know
+
+## Building Submarkets
+
+- /buildings/submarket/downtown: Downtown Calgary office buildings
+- /buildings/submarket/beltline: Beltline district offices
+- /buildings/submarket/suburban-south: Suburban South office locations
+- /buildings/submarket/suburban-north: Suburban North office locations
+
+## Coworking Areas
+
+- /coworking/bia/kensington: Kensington Business Improvement Area
+- /coworking/bia/victoria-park: Victoria Park Business Improvement Area
+
+## Key Features
+
+- Office Space Calculator: Calculate square footage needs based on offices, cubicles, meeting rooms
+- Deals of the Quarter: Quarterly lease transaction intelligence
+- Calgary Business Directory: Map and listings of Calgary companies
+- Building Directory: Informational profiles of Calgary office buildings
+
+## Contact
+
+Calgary Office Advisors provides commercial real estate advisory services for Calgary tenants.

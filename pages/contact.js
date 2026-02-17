@@ -19,6 +19,7 @@ import {
   FormLabel,
   Icon,
   useToast,
+  Image,
 } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
 import { NextSeo } from 'next-seo';
@@ -171,46 +172,56 @@ export default function Contact() {
         {/* Hero Section */}
         <Box pt={{ base: 32, lg: 40 }} pb={{ base: 8, lg: 16 }}>
           <Container maxW="1400px" px={{ base: 4, md: 8, lg: 12 }}>
-            <MotionBox
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              maxW="700px"
-            >
-              <Text
-                fontSize="xs"
-                fontWeight="600"
-                color="accent.gold"
-                letterSpacing="0.2em"
-                textTransform="uppercase"
-                mb={4}
+            <Grid templateColumns={{ base: '1fr', md: '200px 1fr' }} gap={{ base: 6, md: 10 }} alignItems="center">
+              <Box>
+                <Image
+                  src="/images/Headshot.jpeg"
+                  alt="Abdul-Samad Olagunju"
+                  borderRadius="lg"
+                  objectFit="cover"
+                  w={{ base: '150px', md: '200px' }}
+                  h={{ base: '150px', md: '200px' }}
+                  boxShadow="lg"
+                />
+              </Box>
+              <MotionBox
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
               >
-                Contact
-              </Text>
-              <Heading
-                as="h1"
-                fontSize={{ base: '3xl', md: '4xl', lg: '5xl' }}
-                fontFamily="heading"
-                fontWeight="400"
-                color={colors.textPrimary}
-                lineHeight="1.1"
-                letterSpacing="-0.02em"
-                mb={6}
-              >
-                Let's Start a
-                <br />
-                Conversation
-              </Heading>
-              <Text
-                fontSize={{ base: 'md', md: 'lg' }}
-                color={colors.textMuted}
-                lineHeight="1.8"
-              >
-                Whether you're navigating a complex lease negotiation, exploring 
-                new markets, or looking to optimize your portfolio, I'd love to 
-                hear about your real estate challenges.
-              </Text>
-            </MotionBox>
+                <Text
+                  fontSize="xs"
+                  fontWeight="600"
+                  color="accent.gold"
+                  letterSpacing="0.2em"
+                  textTransform="uppercase"
+                  mb={2}
+                >
+                  Commercial Real Estate Advisor
+                </Text>
+                <Heading
+                  as="h1"
+                  fontSize={{ base: '2xl', md: '3xl', lg: '4xl' }}
+                  fontFamily="heading"
+                  fontWeight="400"
+                  color={colors.textPrimary}
+                  lineHeight="1.1"
+                  letterSpacing="-0.02em"
+                  mb={4}
+                >
+                  Abdul-Samad Olagunju
+                </Heading>
+                <Text
+                  fontSize={{ base: 'md', md: 'lg' }}
+                  color={colors.textMuted}
+                  lineHeight="1.8"
+                >
+                  Whether you're navigating a complex lease negotiation, exploring 
+                  new markets, or looking to optimize your portfolio, I'd love to 
+                  hear about your real estate challenges.
+                </Text>
+              </MotionBox>
+            </Grid>
           </Container>
         </Box>
 
@@ -334,45 +345,6 @@ export default function Contact() {
                     />
                   </Box>
                 </Link>
-
-                {/* Cresa Info */}
-                <Box p={6} bg={colors.bgAlt}>
-                  <VStack align="flex-start" spacing={3}>
-                    <Text
-                      fontSize="xs"
-                      fontWeight="600"
-                      color={colors.textSubtle}
-                      letterSpacing="0.1em"
-                      textTransform="uppercase"
-                    >
-                      Affiliated With
-                    </Text>
-                    <Heading
-                      as="h4"
-                      fontSize="lg"
-                      fontFamily="heading"
-                      fontWeight="400"
-                      color={colors.textPrimary}
-                    >
-                      Cresa
-                    </Heading>
-                    <Text fontSize="sm" color={colors.textMuted}>
-                      The world's largest occupier-only commercial real estate firm.
-                    </Text>
-                    <Link
-                      href="https://www.cresa.com"
-                      isExternal
-                      fontSize="sm"
-                      color="accent.gold"
-                      fontWeight="500"
-                      display="flex"
-                      alignItems="center"
-                      gap={1}
-                    >
-                      Visit Cresa.com <FiArrowUpRight />
-                    </Link>
-                  </VStack>
-                </Box>
               </VStack>
             </GridItem>
 

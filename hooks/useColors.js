@@ -14,6 +14,7 @@ export const useColors = () => {
     bgAlt: isDark ? '#0f1a24' : 'surface.cream',
     bgCard: isDark ? '#152028' : 'white',
     bgCardHover: isDark ? '#1a2830' : 'gray.50',
+    bgHover: isDark ? '#1a2830' : 'navy.50',
     bgNavy: isDark ? '#1a2830' : 'navy.800',
     
     // Text colors
@@ -25,6 +26,8 @@ export const useColors = () => {
     // Accent colors
     accent: 'accent.gold',
     accentHover: '#d4ac2b',
+    accentBg: isDark ? 'rgba(201, 162, 39, 0.1)' : 'rgba(201, 162, 39, 0.08)',
+    accentBorder: isDark ? 'rgba(201, 162, 39, 0.3)' : 'rgba(201, 162, 39, 0.2)',
     
     // Border colors
     border: isDark ? '#3e4c5a' : 'navy.100',

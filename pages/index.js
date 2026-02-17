@@ -18,6 +18,7 @@ import {
 import { NextSeo } from 'next-seo';
 import { FiArrowRight } from 'react-icons/fi';
 import Layout from '../components/Layout';
+import DealsOfTheQuarter from '../components/DealsOfTheQuarter';
 import useColors from '../hooks/useColors';
 
 const valueCards = [
@@ -53,7 +54,7 @@ export default function Home() {
     e.preventDefault();
     const trimmed = businessUrl.trim();
     if (trimmed) {
-      router.push({ pathname: '/contact', query: { website: trimmed } });
+      router.push(`/add-business?url=${encodeURIComponent(trimmed)}`);
     }
   };
 
@@ -143,7 +144,7 @@ export default function Home() {
                   letterSpacing="0.08em"
                   textTransform="uppercase"
                 >
-                  For Calgary business owners and operators
+                  For Calgary's Builders.
                 </Box>
                 <Heading
                   as="h1"
@@ -154,7 +155,7 @@ export default function Home() {
                   lineHeight="1.12"
                   letterSpacing="-0.025em"
                 >
-                  The reference library for commercial real estate in Calgary.
+                  Discover today's spaces.
                 </Heading>
                 <Text
                   fontSize={{ base: 'lg', md: 'xl' }}
@@ -191,10 +192,12 @@ export default function Home() {
                       h={{ base: '56px', md: '60px' }}
                       flex={1}
                       _placeholder={{ color: 'navy.400' }}
-                      _hover={{ borderColor: 'whiteAlpha.6' }}
+                      _hover={{ borderColor: 'whiteAlpha.6', bg: 'white' }}
                       _focus={{
                         borderColor: 'white',
                         boxShadow: '0 0 0 2px rgba(255,255,255,0.5)',
+                        bg: 'white',
+                        color: 'navy.900',
                       }}
                     />
                     <Button
@@ -268,6 +271,9 @@ export default function Home() {
           </Box>
         </Box>
 
+        {/* Deals of the Quarter – Prominent section */}
+        <DealsOfTheQuarter />
+
         {/* Value cards – light and dark mode */}
         <Box bg={cardsBg} py={{ base: 10, md: 12 }} px={{ base: 0, md: 0 }}>
           <Container maxW="1100px" px={{ base: 4, md: 6, lg: 8 }}>
@@ -338,7 +344,7 @@ export default function Home() {
               textAlign="center"
               mb={4}
             >
-              Trusted reference for the leasing process
+              Trusted reference for Calgary's business community
             </Text>
             <Text
               fontSize={{ base: 'lg', md: 'xl' }}
@@ -346,7 +352,7 @@ export default function Home() {
               textAlign="center"
               lineHeight="1.7"
             >
-              Calgary Office Advisors is a knowledge hub for business owners navigating commercial real estate—bookmark it and return whenever you need clarity on costs, lease types, or next steps.
+              Calgary Office Advisors is a knowledge hub for business owners navigating Calgary—bookmark it and return whenever you need clarity on what's going on in the city.
             </Text>
           </Container>
         </Box>

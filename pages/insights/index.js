@@ -26,9 +26,43 @@ export default function CompaniesPage({ insights }) {
 
   return (
     <>
-      <NextSeo title={title} description={description} />
+      <NextSeo title={title} description={description}
+        openGraph={{
+          title,
+          description,
+          url: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://calgaryofficeadvisors.ca'}/insights`,
+          images: [
+            {
+              url: companiesData[0]?.image || '/images/Headshot.jfif',
+              width: 800,
+              height: 600,
+              alt: companiesData[0]?.name || 'Calgary Office Advisors',
+            },
+          ],
+        }}
+        twitter={{
+          cardType: 'summary_large_image',
+        }}
+        canonical={`${process.env.NEXT_PUBLIC_SITE_URL || 'https://calgaryofficeadvisors.ca'}/insights`}
+      />
       <Head>
         <title>{title}</title>
+        <meta name="description" content={description} />
+        <link rel="canonical" href={`${process.env.NEXT_PUBLIC_SITE_URL || 'https://calgaryofficeadvisors.ca'}/insights`} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          '@context': 'https://schema.org',
+          '@type': 'WebPage',
+          name: title,
+          description,
+          url: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://calgaryofficeadvisors.ca'}/insights`,
+          image: companiesData[0]?.image || '/images/Headshot.jfif',
+          mainEntity: companiesData.map(c => ({
+            '@type': 'Organization',
+            name: c.name,
+            address: c.address,
+            url: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://calgaryofficeadvisors.ca'}/insights/company/${c.id}`,
+          })),
+        }) }} />
       </Head>
       <Layout>
         <Box pt={{ base: 28, lg: 32 }} pb={{ base: 16, lg: 24 }}>
@@ -53,10 +87,10 @@ export default function CompaniesPage({ insights }) {
                   fontWeight="400"
                   color={colors.textPrimary}
                 >
-                  Calgary business directory
+                  Calgary Business Directory
                 </Heading>
                 <Text mt={4} fontSize="lg" color={colors.textMuted} lineHeight="1.7" maxW="640px">
-                  Businesses in the Calgary.
+                  Businesses in Calgary.
                 </Text>
 
                 <Box mt={8}>
@@ -96,7 +130,134 @@ export default function CompaniesPage({ insights }) {
                 </SimpleGrid>
               </Box>
 
-              {/* Articles and commentary – bottom section */}
+              {/* Calgary Company Intelligence – bottom section */}
+              <Box pt={8} borderTop="1px solid" borderColor={colors.border}>
+                <Heading
+                  as="h2"
+                  size="lg"
+                  fontFamily="heading"
+                  fontWeight="400"
+                  color={colors.textPrimary}
+                  mb={2}
+                >
+                  Calgary Company Intelligence
+                </Heading>
+                <Text fontSize="md" color={colors.textMuted} mb={8} lineHeight="1.7">
+                  Strategic resources for tracking office demand, expansion signals, and market opportunities.
+                </Text>
+
+                <VStack align="stretch" spacing={3} mb={10}>
+                  <NextLink href="https://www.merx.com/public/solicitations/open" passHref legacyBehavior>
+                    <Link
+                      display="flex"
+                      alignItems="center"
+                      p={4}
+                      bg={colors.bgCard}
+                      border="1px solid"
+                      borderColor={colors.border}
+                      borderRadius="md"
+                      _hover={{ borderColor: colors.borderHover, textDecoration: 'none' }}
+                      isExternal
+                    >
+                      <Text fontSize="md" fontWeight="500" color={colors.textPrimary}>
+                        MERX: Canadian Government Tender Database
+                      </Text>
+                    </Link>
+                  </NextLink>
+
+                  <NextLink href="https://www.alberta.ca/grant-payments-disclosure-table" passHref legacyBehavior>
+                    <Link
+                      display="flex"
+                      alignItems="center"
+                      p={4}
+                      bg={colors.bgCard}
+                      border="1px solid"
+                      borderColor={colors.border}
+                      borderRadius="md"
+                      _hover={{ borderColor: colors.borderHover, textDecoration: 'none' }}
+                      isExternal
+                    >
+                      <Text fontSize="md" fontWeight="500" color={colors.textPrimary}>
+                        Government Grants Payments
+                      </Text>
+                    </Link>
+                  </NextLink>
+
+                  <NextLink href="https://majorprojects.alberta.ca/" passHref legacyBehavior>
+                    <Link
+                      display="flex"
+                      alignItems="center"
+                      p={4}
+                      bg={colors.bgCard}
+                      border="1px solid"
+                      borderColor={colors.border}
+                      borderRadius="md"
+                      _hover={{ borderColor: colors.borderHover, textDecoration: 'none' }}
+                      isExternal
+                    >
+                      <Text fontSize="md" fontWeight="500" color={colors.textPrimary}>
+                        Government of Alberta Major Projects
+                      </Text>
+                    </Link>
+                  </NextLink>
+
+                  <NextLink href="https://lobbycanada.gc.ca/app/secure/ocl/lrs/do/guest" passHref legacyBehavior>
+                    <Link
+                      display="flex"
+                      alignItems="center"
+                      p={4}
+                      bg={colors.bgCard}
+                      border="1px solid"
+                      borderColor={colors.border}
+                      borderRadius="md"
+                      _hover={{ borderColor: colors.borderHover, textDecoration: 'none' }}
+                      isExternal
+                    >
+                      <Text fontSize="md" fontWeight="500" color={colors.textPrimary}>
+                        Office of the Commissioner of Lobbying of Canada
+                      </Text>
+                    </Link>
+                  </NextLink>
+
+                  <NextLink href="https://competition-bureau.canada.ca/en/mergers-and-acquisitions/report-concluded-merger-reviews" passHref legacyBehavior>
+                    <Link
+                      display="flex"
+                      alignItems="center"
+                      p={4}
+                      bg={colors.bgCard}
+                      border="1px solid"
+                      borderColor={colors.border}
+                      borderRadius="md"
+                      _hover={{ borderColor: colors.borderHover, textDecoration: 'none' }}
+                      isExternal
+                    >
+                      <Text fontSize="md" fontWeight="500" color={colors.textPrimary}>
+                        M&A Canada
+                      </Text>
+                    </Link>
+                  </NextLink>
+
+                  <NextLink href="https://innovation.ised-isde.canada.ca/innovation/s/?language=en_CA" passHref legacyBehavior>
+                    <Link
+                      display="flex"
+                      alignItems="center"
+                      p={4}
+                      bg={colors.bgCard}
+                      border="1px solid"
+                      borderColor={colors.border}
+                      borderRadius="md"
+                      _hover={{ borderColor: colors.borderHover, textDecoration: 'none' }}
+                      isExternal
+                    >
+                      <Text fontSize="md" fontWeight="500" color={colors.textPrimary}>
+                        Business Grant
+                      </Text>
+                    </Link>
+                  </NextLink>
+                </VStack>
+              </Box>
+
+              {/* Articles Section */}
               <Box pt={8} borderTop="1px solid" borderColor={colors.border}>
                 <Heading
                   as="h2"
@@ -114,7 +275,7 @@ export default function CompaniesPage({ insights }) {
 
                 {!insights || insights.length === 0 ? (
                   <Text color={colors.textMuted}>
-                    No posts yet. Add markdown files to <code>content/insights/</code> with frontmatter (title, date, excerpt).
+                    No posts yet. Add markdown files to <code>data/insights/</code> with frontmatter (title, date, excerpt).
                   </Text>
                 ) : (
                   <VStack align="stretch" spacing={0} borderTop="1px solid" borderColor={colors.border}>

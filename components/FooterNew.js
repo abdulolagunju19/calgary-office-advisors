@@ -5,13 +5,14 @@ import {
   Container,
   Flex,
   VStack,
+  HStack,
   Text,
   Link,
   Button,
   Divider,
   useColorMode,
 } from '@chakra-ui/react';
-import { FiArrowUpRight } from 'react-icons/fi';
+import { FiArrowUpRight, FiPhone, FiMail } from 'react-icons/fi';
 
 const FooterLink = ({ href, children, isExternal = false, colorMode }) => (
   <NextLink href={href} passHref legacyBehavior>
@@ -82,8 +83,26 @@ const FooterNew = () => {
 
           <VStack align={{ base: 'flex-start', md: 'flex-end' }} spacing={5}>
             <Text fontSize="sm" fontWeight="600" color={textMuted} letterSpacing="0.1em" textTransform="uppercase">
-              Stay updated
+              Get in Touch
             </Text>
+            <VStack align={{ base: 'flex-start', md: 'flex-end' }} spacing={3}>
+              <Link href="tel:+15874320012" _hover={{ textDecoration: 'none' }}>
+                <HStack spacing={2}>
+                  <FiPhone />
+                  <Text fontSize="lg" fontWeight="600" color={textPrimary}>
+                    (587) 432-0012
+                  </Text>
+                </HStack>
+              </Link>
+              <Link href="mailto:aolagunju@cresa.com" _hover={{ textDecoration: 'none' }}>
+                <HStack spacing={2}>
+                  <FiMail />
+                  <Text fontSize="md" color={textSecondary}>
+                    aolagunju@cresa.com
+                  </Text>
+                </HStack>
+              </Link>
+            </VStack>
             <Text fontSize={{ base: 'md', md: 'lg' }} color={textSecondary} maxW="340px" textAlign={{ base: 'left', md: 'right' }} lineHeight="1.6">
               Market insights and Calgary office leasing updates.
             </Text>

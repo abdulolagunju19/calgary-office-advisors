@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import NextLink from 'next/link';
+import Script from 'next/script';
 import {
   Box,
   Container,
@@ -31,12 +32,40 @@ export default function InsightPost({ post }) {
   if (!post) return null;
   const title = `${post.title} | Calgary Office Advisors`;
   const description = post.excerpt || post.title;
+  const siteUrl = 'https://calgary-office-advisors.vercel.app';
+
+  const structuredData = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: post.title,
+    description: description,
+    author: {
+      '@type': 'Organization',
+      name: 'Calgary Office Advisors',
+      url: siteUrl,
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'Calgary Office Advisors',
+      url: siteUrl,
+    },
+    datePublished: post.date || new Date().toISOString(),
+    dateModified: post.date || new Date().toISOString(),
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': `${siteUrl}/insights/${post.slug}`,
+    },
+  };
 
   return (
     <>
       <NextSeo title={title} description={description} />
       <Head>
         <title>{title}</title>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        />
       </Head>
       <Layout>
         <Box pt={{ base: 28, lg: 32 }} pb={{ base: 16, lg: 24 }}>
@@ -113,7 +142,7 @@ export default function InsightPost({ post }) {
 
 export function getStaticProps({ params }) {
   const post = getInsightBySlug(params.slug);
-  return { props: { post: post || null } };
+  return { props: { post: post ? { ...post, slug: params.slug } : null } };
 }
 
 export function getStaticPaths() {

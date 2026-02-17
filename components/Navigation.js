@@ -16,8 +16,11 @@ import {
   DrawerOverlay,
   DrawerContent,
   DrawerCloseButton,
+  Button,
+  Link,
 } from '@chakra-ui/react';
 import { HamburgerIcon, CloseIcon, MoonIcon, SunIcon } from '@chakra-ui/icons';
+import { FiPhone } from 'react-icons/fi';
 
 const NavLink = ({ href, children, isActive, colorMode }) => {
   const activeColor = colorMode === 'light' ? 'navy.900' : '#e8edf3';
@@ -112,6 +115,7 @@ const Navigation = () => {
     { href: '/buildings', label: 'Buildings' },
     { href: '/coworking', label: 'Coworking' },
     { href: '/references', label: 'References' },
+    { href: '/contact', label: 'Contact' },
   ];
 
   // Solid background so title and links are always readable (e.g. over dark homepage hero)
@@ -170,7 +174,23 @@ const Navigation = () => {
             ))}
           </HStack>
 
-          <HStack spacing={2} display={{ base: 'none', lg: 'flex' }}>
+          <HStack spacing={3} display={{ base: 'none', lg: 'flex' }}>
+            <Link href="tel:+15874320012" _hover={{ textDecoration: 'none' }}>
+              <Button
+                size="sm"
+                leftIcon={<FiPhone />}
+                variant="outline"
+                borderColor={colorMode === 'light' ? 'navy.300' : 'whiteAlpha.4'}
+                color={colorMode === 'light' ? 'navy.900' : 'white'}
+                fontSize="sm"
+                fontWeight="600"
+                _hover={{
+                  bg: colorMode === 'light' ? 'navy.50' : 'whiteAlpha.1',
+                }}
+              >
+                (587) 432-0012
+              </Button>
+            </Link>
             <IconButton
               aria-label="Toggle color mode"
               icon={colorMode === 'light' ? <MoonIcon /> : <SunIcon />}

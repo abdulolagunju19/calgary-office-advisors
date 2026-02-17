@@ -18,6 +18,7 @@ import { FiArrowLeft, FiMapPin } from 'react-icons/fi';
 import Layout from '../../components/Layout';
 import useColors from '../../hooks/useColors';
 import buildingsData from '../../data/buildings.json';
+const CalgaryMap = dynamic(() => import('../../components/CalgaryMap'), { ssr: false });
 
 const PLACEHOLDER_IMAGE = 'data:image/svg+xml,' + encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" width="800" height="400" viewBox="0 0 800 400"><rect fill="#e2e8f0" width="800" height="400"/><text fill="#718096" x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="sans-serif" font-size="16">No image</text></svg>');
 

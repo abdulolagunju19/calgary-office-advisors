@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import dynamic from 'next/dynamic';
 import {
   Box,
   Container,
@@ -10,6 +11,8 @@ import { NextSeo } from 'next-seo';
 import Layout from '../../components/Layout';
 import useColors from '../../hooks/useColors';
 import referencesData from '../../data/references.json';
+
+const CalgaryMap = dynamic(() => import('../../components/CalgaryMap'), { ssr: false });
 
 const CATEGORY_LABELS = {
   designers: 'Designers',
@@ -54,6 +57,11 @@ export default function ReferencesIndex() {
                 <Text mt={4} fontSize="lg" color={colors.textMuted} lineHeight="1.7">
                   A reference list of designers, law firms, and related professionals. This section is guidance only—not endorsement.
                 </Text>
+              </Box>
+
+              {/* Map */}
+              <Box>
+                <CalgaryMap markers={[]} markerColor="#805ad5" />
               </Box>
 
               {Object.entries(referencesData).map(([key, list]) => (

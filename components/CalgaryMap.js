@@ -5,10 +5,13 @@ const CALGARY_CENTER = [51.0447, -114.0719];
 const DEFAULT_ZOOM = 13;
 
 /**
- * Client-only map using Leaflet from CDN. Shows Calgary with optional company markers.
- * Companies in data should have { lat, lng, name }.
+ * Client-only map using Leaflet from CDN. Shows Calgary with optional markers.
+ * Markers should have { lat, lng, name }.
+ * @param {Object} props
+ * @param {Array} props.markers - Array of marker objects with lat, lng, name properties
+ * @param {string} props.markerColor - Optional marker color (default: blue)
  */
-export default function CompaniesMap({ companies = [] }) {
+export default function CalgaryMap({ markers = [], markerColor = '#2c5282' }) {
   const containerRef = useRef(null);
   const mapRef = useRef(null);
 
@@ -45,26 +48,26 @@ export default function CompaniesMap({ companies = [] }) {
         height: 20px;
         margin-left: -10px;
         margin-top: -10px;
-        background: #2c5282;
+        background: ${markerColor};
         border: 3px solid white;
         border-radius: 50%;
         box-shadow: 0 2px 8px rgba(0,0,0,0.25);
       "></span>`;
       const icon = L.divIcon({
         html: markerHtml,
-        className: 'companies-map-marker',
+        className: 'calgary-map-marker',
         iconSize: [20, 20],
         iconAnchor: [10, 10],
         popupAnchor: [0, -18],
       });
 
-      const hasValidCoords = (c) => c && typeof c.lat === 'number' && typeof c.lng === 'number';
-      companies.filter(hasValidCoords).forEach((company) => {
-        L.marker([company.lat, company.lng], { icon })
+      const hasValidCoords = (m) => m && typeof m.lat === 'number' && typeof m.lng === 'number';
+      markers.filter(hasValidCoords).forEach((marker) => {
+        L.marker([marker.lat, marker.lng], { icon })
           .addTo(map)
-          .bindPopup(company.name || 'Company', {
+          .bindPopup(marker.name || 'Location', {
             closeButton: true,
-            className: 'companies-map-popup',
+            className: 'calgary-map-popup',
           });
       });
     };
@@ -95,7 +98,7 @@ export default function CompaniesMap({ companies = [] }) {
         mapRef.current = null;
       }
     };
-  }, [companies]);
+  }, [markers, markerColor]);
 
   return (
     <Box
@@ -110,10 +113,9 @@ export default function CompaniesMap({ companies = [] }) {
       boxShadow="sm"
       _dark={{ bg: 'whiteAlpha.08', borderColor: 'whiteAlpha.2' }}
       sx={{
-        '& .companies-map-marker': { border: 'none', background: 'transparent' },
+        '& .calgary-map-marker': { border: 'none', background: 'transparent' },
         '& .leaflet-popup-content-wrapper': { borderRadius: '8px', boxShadow: '0 4px 12px rgba(0,0,0,0.15)' },
         '& .leaflet-popup-content': { margin: '10px 14px', fontSize: '14px', fontWeight: '500' },
-        '& .leaflet-popup': { bottom: '-30px' },
       }}
     />
   );
