@@ -81,7 +81,7 @@ export default function InsightPost({ post }) {
                 gap={2}
                 _hover={{ color: colors.textPrimary }}
               >
-                <FiArrowLeft /> Back to Insights
+                <FiArrowLeft /> Back to Companies
               </Link>
             </NextLink>
 
