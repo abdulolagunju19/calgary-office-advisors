@@ -16,6 +16,7 @@ import Layout from '../../../components/Layout';
 import useColors from '../../../hooks/useColors';
 import buildingsData from '../../../data/buildings.json';
 import submarketsData from '../../../data/submarkets.json';
+import dynamic from 'next/dynamic';
 const CalgaryMap = dynamic(() => import('../../../components/CalgaryMap'), { ssr: false });
 
 const PLACEHOLDER_IMAGE = 'data:image/svg+xml,' + encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" width="400" height="240" viewBox="0 0 400 240"><rect fill="#e2e8f0" width="400" height="240"/><text fill="#718096" x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="sans-serif" font-size="14">No image</text></svg>');
