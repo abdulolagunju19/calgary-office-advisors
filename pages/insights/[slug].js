@@ -32,7 +32,7 @@ export default function InsightPost({ post }) {
   if (!post) return null;
   const title = `${post.title} | Calgary Office Advisors`;
   const description = post.excerpt || post.title;
-  const siteUrl = 'https://calgary-office-advisors.vercel.app';
+  const siteUrl = 'https://www.calgaryofficeadvisors.com/';
 
   const structuredData = {
     '@context': 'https://schema.org',
@@ -62,6 +62,7 @@ export default function InsightPost({ post }) {
       <NextSeo title={title} description={description} />
       <Head>
         <title>{title}</title>
+        <link rel="icon" href="/favicon.ico" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}

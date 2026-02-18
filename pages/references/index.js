@@ -29,6 +29,7 @@ export default function ReferencesIndex() {
       <NextSeo title={title} description={description} />
       <Head>
         <title>{title}</title>
+        <link rel="icon" href="/favicon.ico" />
       </Head>
       <Layout>
         <Box pt={{ base: 28, lg: 32 }} pb={{ base: 16, lg: 24 }}>

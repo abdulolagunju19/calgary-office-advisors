@@ -20,6 +20,7 @@ export default function Custom404() {
     <>
       <Head>
         <title>Page not found | Calgary Office Advisors</title>
+        <link rel="icon" href="/favicon.ico" />
       </Head>
       <Layout>
         <Box

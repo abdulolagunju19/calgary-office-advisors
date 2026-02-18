@@ -24,6 +24,7 @@ export default function Document() {
         
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
+        <link rel="icon" href="/favicon.ico" />
       </Head>
       <body>
         <Main />

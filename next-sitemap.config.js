@@ -1,6 +1,6 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: process.env.SITE_URL || 'https://calgary-office-advisors.vercel.app',
+  siteUrl: process.env.SITE_URL || 'https://www.calgaryofficeadvisors.com/',
   generateRobotsTxt: true,
   robotsTxtOptions: {
     additionalSitemaps: [],

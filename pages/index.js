@@ -58,9 +58,9 @@ export default function Home() {
     }
   };
 
-  const siteUrl = 'https://calgary-office-advisors.vercel.app';
-  const title = 'Calgary Office Advisors | Reference & Education';
-  const description = 'A trusted reference and education platform for commercial real estate in Calgary. Insights, building directory, coworking, and professional references for the leasing process.';
+  const siteUrl = 'https://www.calgaryofficeadvisors.com/';
+  const title = 'Calgary Office Advisors | Better Deals';
+  const description = 'Calgary’s trusted source for commercial real estate. Explore buildings, coworking options, market insights, and clear direction for your next move.';
 
   const accent = colorMode === 'light' ? 'accent.gold' : '#c9a227';
   const isDark = colorMode === 'dark';
