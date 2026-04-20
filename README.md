@@ -1,6 +1,6 @@
 # Abdul-Samad Olagunju | Commercial Real Estate Advisory
 
-A professional personal website for Abdul-Samad Olagunju, Commercial Real Estate Advisor at Cresa.
+A professional personal website for Abdul-Samad Olagunju, Commercial Real Estate Advisor at Cresa Real Estate.
 
 ## 🏗️ Built With
 
