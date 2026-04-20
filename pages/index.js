@@ -59,7 +59,7 @@ export default function Home() {
   };
 
   const siteUrl = 'https://www.calgaryofficeadvisors.com/';
-  const title = 'Calgary Office Advisors | Better Deals';
+  const title = 'Calgary Office Advisors | Office Space for Lease Calgary';
   const description = 'Calgary’s trusted source for commercial real estate. Explore buildings, coworking options, market insights, and clear direction for your next move.';
 
   const accent = colorMode === 'light' ? 'accent.gold' : '#c9a227';

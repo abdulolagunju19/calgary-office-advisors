@@ -58,7 +58,7 @@ const BIACard = ({ name, description, href, colors }) => (
 export default function CoworkingIndex() {
   const colors = useColors();
   const title = 'Coworking | Calgary Office Advisors';
-  const description = 'Browse coworking spaces by Calgary submarket. A curated list for reference.';
+  const description = 'Calgary coworking spaces by neighborhood. Compare WeWork, Platform Calgary, Workhaus, and local spaces. Find flexible office solutions in Calgary.';
 
   return (
     <>
@@ -66,7 +66,7 @@ export default function CoworkingIndex() {
         openGraph={{
           title,
           description,
-          url: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://calgaryofficeadvisors.ca'}/coworking`,
+          url: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.calgaryofficeadvisors.com'}/coworking`,
           images: [
             {
               url: coworkingData[0]?.image || '/images/Headshot.jfif',
@@ -79,25 +79,25 @@ export default function CoworkingIndex() {
         twitter={{
           cardType: 'summary_large_image',
         }}
-        canonical={`${process.env.NEXT_PUBLIC_SITE_URL || 'https://calgaryofficeadvisors.ca'}/coworking`}
+        canonical={`${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.calgaryofficeadvisors.com'}/coworking`}
       />
       <Head>
         <title>{title}</title>
         <meta name="description" content={description} />
-        <link rel="canonical" href={`${process.env.NEXT_PUBLIC_SITE_URL || 'https://calgaryofficeadvisors.ca'}/coworking`} />
+        <link rel="canonical" href={`${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.calgaryofficeadvisors.com'}/coworking`} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
           '@context': 'https://schema.org',
           '@type': 'WebPage',
           name: title,
           description,
-          url: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://calgaryofficeadvisors.ca'}/coworking`,
+          url: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.calgaryofficeadvisors.com'}/coworking`,
           image: coworkingData[0]?.image || '/images/Headshot.jfif',
           mainEntity: coworkingData.map(c => ({
             '@type': 'Place',
             name: c.name,
             address: c.address,
             geo: { '@type': 'GeoCoordinates', latitude: c.lat, longitude: c.lng },
-            url: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://calgaryofficeadvisors.ca'}/coworking/${c.id}`,
+            url: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.calgaryofficeadvisors.com'}/coworking/${c.id}`,
           })),
         }) }} />
       </Head>

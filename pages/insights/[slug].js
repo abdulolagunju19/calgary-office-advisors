@@ -51,6 +51,52 @@ export default function InsightPost({ post }) {
     },
     datePublished: post.date || new Date().toISOString(),
     dateModified: post.date || new Date().toISOString(),
+    const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: 'How much does office space cost in Calgary?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Calgary office lease rates vary by class and location. Downtown Class A space typically ranges from 32-55 CAD per square foot annually (NNN). Class B space runs 22-32 CAD per square foot. Suburban options are generally 18-30 CAD per square foot. Actual rates depend on building, floor, view, amenities, and negotiation.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'What is the difference between Class A, B, and C office space?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Class A buildings are premium high-rises with modern systems, professional management, and high-end finishes. Class B buildings are good quality mid-rise buildings with functional but older finishes. Class C buildings are older properties with dated systems and lower rents. The class determines both the space quality and the lease rate bracket.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'Should I lease directly or work with a tenant rep broker?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'A tenant rep broker represents your interests as a tenant, not the landlord. At Calgary Office Advisors, we track every significant lease transaction in Calgary. That market intelligence helps you negotiate better terms, avoid common mistakes, and find options you would not discover on your own. Tenant rep services are typically paid by the landlord through commission structures built into the lease.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'What should I look for when touring Calgary office space?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Check: elevator wait times, lobby condition and cleanliness, parking availability and cost, HVAC reliability, internet carrier options, neighboring tenants, restaurant and service access nearby, transit connections, and building security. Ask about operating cost caps and recent renovations. Always get the actual operating cost breakdown, not just the base rent.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'How do I negotiate tenant improvement allowances in Calgary?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'TI allowances in Calgary typically range from 20-80 CAD per square foot depending on lease term, building class, and landlord. The longer the term and the better your credit, the more negotiating leverage you have. TI allowances are often the most valuable concession in a Calgary office lease. A 50 CAD per square foot TI allowance on a 10,000 square foot space is 500,000 CAD you can use for your office build-out.'
+        }
+      }
+    ]
+  };
     mainEntityOfPage: {
       '@type': 'WebPage',
       '@id': `${siteUrl}/insights/${post.slug}`,
@@ -65,7 +111,7 @@ export default function InsightPost({ post }) {
         <link rel="icon" href="/favicon.ico" />
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify([structuredData, faqSchema]) }}
         />
       </Head>
       <Layout>
@@ -82,7 +128,7 @@ export default function InsightPost({ post }) {
                 gap={2}
                 _hover={{ color: colors.textPrimary }}
               >
-                <FiArrowLeft /> Back to Companies
+                <FiArrowLeft /> Back to Insights
               </Link>
             </NextLink>
 

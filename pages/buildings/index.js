@@ -124,7 +124,7 @@ export default function BuildingsIndex() {
   };
 
   const title = 'Buildings | Calgary Office Advisors';
-  const description = 'Browse office buildings by Calgary submarket. Informational directory—not a vacancy search.';
+  const description = 'Browse Calgary office buildings by submarket. Get lease rates, building details, and market context for Class A, B, and C office spaces across Calgary.';
 
   const currentFilterContent = activeFilter !== 'all' ? filterContent[activeFilter] : null;
 
@@ -134,7 +134,7 @@ export default function BuildingsIndex() {
         openGraph={{
           title,
           description,
-          url: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://calgaryofficeadvisors.ca'}/buildings`,
+          url: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.calgaryofficeadvisors.com'}/buildings`,
           images: [
             {
               url: buildingsData[0]?.image || '/images/Headshot.jfif',
@@ -147,25 +147,25 @@ export default function BuildingsIndex() {
         twitter={{
           cardType: 'summary_large_image',
         }}
-        canonical={`${process.env.NEXT_PUBLIC_SITE_URL || 'https://calgaryofficeadvisors.ca'}/buildings`}
+        canonical={`${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.calgaryofficeadvisors.com'}/buildings`}
       />
       <Head>
         <title>{title}</title>
         <meta name="description" content={description} />
-        <link rel="canonical" href={`${process.env.NEXT_PUBLIC_SITE_URL || 'https://calgaryofficeadvisors.ca'}/buildings`} />
+        <link rel="canonical" href={`${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.calgaryofficeadvisors.com'}/buildings`} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
           '@context': 'https://schema.org',
           '@type': 'WebPage',
           name: title,
           description,
-          url: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://calgaryofficeadvisors.ca'}/buildings`,
+          url: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.calgaryofficeadvisors.com'}/buildings`,
           image: buildingsData[0]?.image || '/images/Headshot.jfif',
           mainEntity: buildingsData.map(b => ({
             '@type': 'Place',
             name: b.name,
             address: b.address,
             geo: { '@type': 'GeoCoordinates', latitude: b.lat, longitude: b.lng },
-            url: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://calgaryofficeadvisors.ca'}/buildings/${b.id}`,
+            url: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.calgaryofficeadvisors.com'}/buildings/${b.id}`,
           })),
         }) }} />
       </Head>

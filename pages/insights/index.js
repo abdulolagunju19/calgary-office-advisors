@@ -21,8 +21,8 @@ const CompaniesMap = dynamic(() => import('../../components/CompaniesMap'), { ss
 
 export default function CompaniesPage({ insights }) {
   const colors = useColors();
-  const title = 'Companies | Calgary Office Advisors';
-  const description = 'Calgary business directory and map. Plus articles and commentary on commercial real estate: leasing strategy, office trends, and move planning.';
+  const title = 'Insights | Calgary Office Advisors';
+  const description = 'Calgary commercial real estate insights: office leasing guides, market reports, neighborhood breakdowns, and deal analysis. Trusted by businesses navigating Calgary office space.';
 
   return (
     <>
@@ -30,7 +30,7 @@ export default function CompaniesPage({ insights }) {
         openGraph={{
           title,
           description,
-          url: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://calgaryofficeadvisors.ca'}/insights`,
+          url: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.calgaryofficeadvisors.com'}/insights`,
           images: [
             {
               url: companiesData[0]?.image || '/images/Headshot.jfif',
@@ -43,24 +43,24 @@ export default function CompaniesPage({ insights }) {
         twitter={{
           cardType: 'summary_large_image',
         }}
-        canonical={`${process.env.NEXT_PUBLIC_SITE_URL || 'https://calgaryofficeadvisors.ca'}/insights`}
+        canonical={`${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.calgaryofficeadvisors.com'}/insights`}
       />
       <Head>
         <title>{title}</title>
         <meta name="description" content={description} />
-        <link rel="canonical" href={`${process.env.NEXT_PUBLIC_SITE_URL || 'https://calgaryofficeadvisors.ca'}/insights`} />
+        <link rel="canonical" href={`${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.calgaryofficeadvisors.com'}/insights`} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
           '@context': 'https://schema.org',
           '@type': 'WebPage',
           name: title,
           description,
-          url: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://calgaryofficeadvisors.ca'}/insights`,
+          url: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.calgaryofficeadvisors.com'}/insights`,
           image: companiesData[0]?.image || '/images/Headshot.jfif',
           mainEntity: companiesData.map(c => ({
             '@type': 'Organization',
             name: c.name,
             address: c.address,
-            url: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://calgaryofficeadvisors.ca'}/insights/company/${c.id}`,
+            url: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.calgaryofficeadvisors.com'}/insights/company/${c.id}`,
           })),
         }) }} />
       </Head>
